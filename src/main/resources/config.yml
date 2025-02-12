@@ -1,0 +1,25 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                  - LiteSkins V1.0 -                  | #
+# |               Lightweight Skins Plugin               | #
+# |                  by Pseudo_Original                  | #
+# +------------------------------------------------------+ #
+############################################################
+
+# If enabled, players will need to have 'liteskins.restore' permission to see their skin restored automatically.
+restore-permission: false
+
+mineskin:
+  # LiteSkins uses MineSkin.org API to allow players to upload a skin from a URL with /skin <URL>
+  # An API key is not required, but it is recommended, in order to increase the default limits on requests frequency.
+  # You can leave "api-key" empty, or paste there your MineSkin API key (https://mineskin.org/apikey)
+  enabled: false
+  api-key: ""
+
+# If enabled, players won't be able to use the blacklisted skins with /skin <username>
+# Users with 'liteskins.bypassblacklist' are ignored
+blacklist:
+  enabled: false
+  blacklisted-skins:
+    - Notch
+    - Jeb_

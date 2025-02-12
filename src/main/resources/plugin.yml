@@ -1,0 +1,42 @@
+name: LiteSkins
+version: '1.0'
+main: fr.timeothms.liteskins.LiteSkins
+api-version: '1.21'
+website: https://www.spigotmc.org/
+author: Pseudo_Original
+
+commands:
+  skin:
+    description: Apply a skin to the sender from the username of a premium player or a URL
+    permission: liteskins.skin
+  liteskins:
+    description: Default command
+
+permission:
+  liteskins.restore:
+    description: Restore the player skin on join. Not needed if 'restore-permission' is set to false.
+    default: op
+
+  liteskins.skin.username:
+    description: Allow /skin <clear/username>
+    default: op
+  liteskins.skin.url:
+    description: Allow /skin <clear/URL>
+    default: op
+  liteskins.skin.other:
+    description: Allow /skin <clear/username/URL> <other>
+  liteskins.skin.*:
+    description: Allow /skin <clear/username/URL> <other>
+    default: op
+    children:
+      liteskins.skin.username: true
+      liteskins.skin.url: true
+      liteskins.skin.other: true
+
+  liteskins.bypassblacklist:
+    description: Allow bypassing the blacklisted usernames
+    default: op
+
+  liteskins.reload:
+    decription: Allow using /liteskins reload
+    default: op
