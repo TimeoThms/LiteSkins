@@ -12,10 +12,8 @@ public class SQLiteManager {
 
     public SQLiteManager() {
         try {
-            // Charger le driver SQLite
             Class.forName("org.sqlite.JDBC");
 
-            // Ouvrir une connexion à la base de données (créera le fichier s'il n'existe pas)
             connection = DriverManager.getConnection(DATABASE_URL);
 
 

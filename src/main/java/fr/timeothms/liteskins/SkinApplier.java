@@ -13,7 +13,6 @@ import static fr.timeothms.liteskins.LiteSkins.*;
 
 public class SkinApplier {
 
-    // Instance de SQLiteManager pour les opérations DB
 
     public SkinApplier(SQLiteManager sqLiteManager) {
     }
@@ -105,7 +104,7 @@ public class SkinApplier {
 
         Bukkit.getScheduler().runTask(instance, () -> {
             try {
-                Map<String, String> skinData = futureSkinData.get(); // Bloque jusqu'à ce que les données soient disponibles
+                Map<String, String> skinData = futureSkinData.get();
                 String value = skinData.get("value");
                 String signature = skinData.get("signature");
 

@@ -18,7 +18,7 @@ public class MojangAPI {
     private static final String MOJANG_UUID_URL = "https://api.mojang.com/users/profiles/minecraft/%username%";
     private static final String MOJANG_PROFILE_URL = "https://sessionserver.mojang.com/session/minecraft/profile/%uuid%?unsigned=false";
 
-    private static final ExecutorService executorService = Executors.newCachedThreadPool(); // Utilisation d'un pool de threads
+    private static final ExecutorService executorService = Executors.newCachedThreadPool();
 
     public static void fetchUUIDFromUsernameAsync(String username, Callback<String> callback) {
         String urlString = MOJANG_UUID_URL.replace("%username%", username);
